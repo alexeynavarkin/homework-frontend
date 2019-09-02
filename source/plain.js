@@ -1,3 +1,3 @@
 'use strict';
 
-const plain = (arr) => arr.flat(Infinity)
+const plain = arr => arr.flat(Infinity);
