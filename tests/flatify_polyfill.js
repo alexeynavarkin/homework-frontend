@@ -38,11 +38,11 @@ QUnit.module('Тестируем функцию flatify_ftw', function () {
 	});
 
 	QUnit.test('Работает с массивами объектов', function(assert) {
-		assert.deepEqual(flatify_ftw([{}, [{}]]), [{},{}], 'Работает с пустыми объектами');
-		assert.deepEqual(flatify_ftw([{foo: "bar"},[],[[{bar: "foo"}]]]), [{foo: "bar"}, {bar: "foo"}]);
+		assert.deepEqual(flatify_ftw([ {}, [ {} ] ]), [{},{}], 'Работает с пустыми объектами');
+		assert.deepEqual(flatify_ftw([ {foo: "bar"},[],[ [{bar: "foo"}] ] ]), [{foo: "bar"}, {bar: "foo"}]);
 	});
 
 	QUnit.test('Выбрасывает исключение, если передать произвольный объект', function(assert) {
-		assert.throws(()=>flatify_ftw({foo: "bar"}), TypeError);
+		assert.throws(() => flatify_ftw({foo: "bar"}), TypeError);
 	});
 });
