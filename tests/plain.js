@@ -37,8 +37,12 @@ QUnit.module('Тестируем функцию plain', function () {
 		assert.deepEqual(plain([ [ 'abcde' ], [ [ 'f' ], [ null, false ], [ NaN, NaN ], NaN ], -Infinity ]), [ 'abcde', 'f', null, false, NaN, NaN, NaN, -Infinity ]);
 	});
 
-	QUnit.test('Работает объектми', function(assert) {
+	QUnit.test('Работает с массивами объектов', function(assert) {
 		assert.deepEqual(plain([{}, [{}]]), [{},{}], 'Работает с пустыми объектами');
-		assert.deepEqual(plain([{foo: "bar"},[],[[{bar: "foo"}]]]), [{foo: "bar"}, {bar: "foo"}])
+		assert.deepEqual(plain([{foo: "bar"},[],[[{bar: "foo"}]]]), [{foo: "bar"}, {bar: "foo"}]);
+	});
+
+	QUnit.test('Выбрасывает исключение, если передать произвольный объект', function(assert) {
+		assert.throws(()=>plain({foo: "bar"}), TypeError);
 	});
 });
