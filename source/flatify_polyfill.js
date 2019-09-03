@@ -1,9 +1,12 @@
 "use strict";
 
 
+/* This is really strange thing, but why not */
+
+
 Array.prototype.flatify = function() {
     return flatify(this, arguments[0]);
 };
 
 
-const flatify_ftw = arr => arr.flatify(Infinity);
+const flatifyPoly = arr => arr.flatify(Infinity);
