@@ -9,4 +9,10 @@ Array.prototype.flatify = function() {
 };
 
 
-const flatifyPoly = arr => arr.flatify(Infinity);
+const flatifyPoly = arr => {
+    if(!Array.isArray(arr)) {
+        throw new TypeError('Not array provided.');
+    }
+
+    return arr.flatify(Infinity);
+};

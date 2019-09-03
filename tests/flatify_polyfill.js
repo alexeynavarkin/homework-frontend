@@ -44,5 +44,6 @@ QUnit.module('Тестируем функцию flatifyPoly', function () {
 
 	QUnit.test('Выбрасывает исключение, если передать произвольный объект', function(assert) {
 		assert.throws(() => flatifyPoly({foo: "bar"}), TypeError);
+		assert.throws(() => flatifyPoly('SomeText'), TypeError);
 	});
 });
