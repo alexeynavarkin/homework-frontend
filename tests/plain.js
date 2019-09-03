@@ -43,6 +43,6 @@ QUnit.module('Тестируем функцию plain', function () {
 	});
 
 	QUnit.test('Выбрасывает исключение, если передать произвольный объект', function(assert) {
-		assert.throws(()=>plain({foo: "bar"}), TypeError);
+		assert.throws(() => plain({foo: "bar"}), TypeError);
 	});
 });

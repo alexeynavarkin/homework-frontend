@@ -1,6 +1,5 @@
 'use strict';
 
-
 const nonRecursivePlain = (arr) => {
     if (!Array.isArray(arr)) {
         throw new TypeError('Not array provided.');

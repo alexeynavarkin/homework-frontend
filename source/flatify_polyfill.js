@@ -1,13 +1,8 @@
-"use strict";
-
-
-/* This is really strange thing, but why not */
-
+'use strict';
 
 Array.prototype.flatify = function() {
     return flatify(this, arguments[0]);
 };
-
 
 const flatifyPoly = arr => {
     if(!Array.isArray(arr)) {

@@ -43,6 +43,6 @@ QUnit.module('Тестируем функцию nonRecursivePlain', function () 
 	});
 
 	QUnit.test('Выбрасывает исключение, если передать произвольный объект', function(assert) {
-		assert.throws(()=>nonRecursivePlain({foo: "bar"}), TypeError);
+		assert.throws(() => nonRecursivePlain({foo: "bar"}), TypeError);
 	});
 });
