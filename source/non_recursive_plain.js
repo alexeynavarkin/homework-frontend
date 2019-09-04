@@ -5,7 +5,7 @@ const nonRecursivePlain = (arr) => {
         throw new TypeError('Not array provided.');
     }
 
-    let result = [];
+    const result = [];
 
     while (arr.length) {
         const element = arr.pop();
